@@ -11,9 +11,9 @@ def index():
     if request.method == 'POST':
         string = request.form['string']
         if is_palindrome(string):
-            result = "The string is a palindrome"
+            result = "The given string is a palindrome"
         else:
-            result = "The string is not a palindrome"
+            result = "The given string is not a palindrome"
     return render_template('index.html', result=result)
 
 if __name__ == '__main__':
