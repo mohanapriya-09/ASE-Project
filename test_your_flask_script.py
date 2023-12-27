@@ -14,11 +14,11 @@ class TestPalindromeChecker(unittest.TestCase):
     def test_palindrome_check(self):
         response = self.app.post('/', data={'string': 'level'})
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'The string is a palindrome', response.data)
+        self.assertIn(b'The string is found to be a palindrome', response.data)
 
         response = self.app.post('/', data={'string': 'hello'})
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'The string is not a palindrome', response.data)
+        self.assertIn(b'The string is not found to be a palindrome', response.data)
 
 if __name__ == '__main__':
     unittest.main()
