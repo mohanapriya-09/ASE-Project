@@ -18,7 +18,7 @@ class TestPalindromeChecker(unittest.TestCase):
 
         response = self.app.post('/', data={'string': 'hello'})
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'The string is a palindrome', response.data)
+        self.assertIn(b'The string is not a palindrome', response.data)
 
 if __name__ == '__main__':
     unittest.main()
